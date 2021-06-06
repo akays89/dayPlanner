@@ -66,18 +66,18 @@ function timeCheck () {
         $('.form10').addClass('future');
     }
     else if (currentTime.isSame(time2)){
-        $('.form10').addClass('present')
+        $('.form10').addClass('present');
     };
 
     time3 = moment().startOf('day').add(11, 'hours');
     if (currentTime.isAfter(time3)) {
-        $('.form11').addClass('past')
+        $('.form11').addClass('past');
     }
     else if (currentTime.isBefore(time3)) {
-        $('form11').addClass(future);
+        $('.form11').addClass('future');
     }
-    else if (currentTime.isSAme(time3)) {
-        $('form11').addClass('present')
+    else if (currentTime.isSame(time3)) {
+        $('.form11').addClass('present')
     };
 
     time4 = moment().startOf('day').add(12, 'hours');
@@ -147,13 +147,6 @@ else if (currentTime.isBefore(time4)) {
     };
 }
 timeCheck();
-
-var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
-    
-for (var i = 0; i < x.length; i++) {
-    var dataHour = localStorage.getItem(x[i]);
-    $(".form" + x[i]).val(dataHour);
-}
 
 
 
