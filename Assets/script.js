@@ -156,7 +156,7 @@ for (var i = 0; i < x.length; i++) {
     var dataHour = localStorage.getItem(x[i]);
     $(".form" + x[i]).val(dataHour);
 }
-$('.save.btn').click(function (event) {
+$('.saveBtn').click(function (event) {
     event.preventDefault();
     var formValue = $(this).siblings(".form-control").val();
         var listItem = $(this).parent().data("hour");
