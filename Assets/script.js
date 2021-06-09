@@ -148,13 +148,7 @@ else if (currentTime.isBefore(time4)) {
 }
 timeCheck();
 
-$('.save.btn').click(function () {
-    Event.preventDefault();
-    var formValue = $(this).siblings(".form-control").val();
-        var listItem = $(this).parent().data("hour");
-    
-        localStorage.setItem(listItem, formValue);
-});
+
 
 var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
     
@@ -162,7 +156,13 @@ for (var i = 0; i < x.length; i++) {
     var dataHour = localStorage.getItem(x[i]);
     $(".form" + x[i]).val(dataHour);
 }
-
+$('.save.btn').click(function (event) {
+    event.preventDefault();
+    var formValue = $(this).siblings(".form-control").val();
+        var listItem = $(this).parent().data("hour");
+    
+        localStorage.setItem(listItem, formValue);
+});
 
 
 });
